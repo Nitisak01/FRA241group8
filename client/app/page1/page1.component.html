@@ -1,5 +1,6 @@
 <div class="container">
 
+    <div  [hidden]="click1">
     <div class="card-panel teal lighten-4">
         <div class="center-align"> <p class="flow-text">FORM  OF  STUDENT</p>
         </div></div>
@@ -29,7 +30,7 @@
                         <td>1</td>
                         <td>
                             <div class="input-field col s6">
-                                <input  id="first_name1" type="text" class="validate">
+                                <input  id="first_name1" type="text" class="validate" #box10 (keyup.enter)="inputForm.fristname=box10.value" (blur)="inputForm.fristname=box10.value">
                                 <label for="first_name1"><b>First Name</b></label>
                             </div>
                         </td>
@@ -56,7 +57,7 @@
                         <td>2</td>
                         <td>
                             <div class="input-field col s6">
-                                <input  id="first_name2" type="text" class="validate">
+                                <input  id="first_name2" type="text" class="validate" #box11 (keyup.enter)="inputForm.fristname=box11.value" (blur)="inputForm.fristname=box11.value">
                                 <label for="first_name2"><b>First Name</b></label>
                             </div>
                         </td>
@@ -173,8 +174,15 @@
             </div>
 
         <button class="btn btn-default pink lighten-1" routerLink="/book" routerLinkActive="active">Cancel</button>
-        <button class="btn btn-default "routerLink="/book/form/commitform" routerLinkActive="active" >Submit</button>
+        <button class="btn btn-default" (click)="click1=true">Submit</button>
     </div>
 
+    </div>
+    <div  [hidden]="!click1">
+
+        <p>{{inputForm.fristname}}</p>
+
+
+    </div>
 
 </div>
