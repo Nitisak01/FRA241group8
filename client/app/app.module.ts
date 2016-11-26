@@ -9,26 +9,28 @@ import {searchcomponent} from "./search.component";
 import {floorsearchcomponent} from "./floorsearch.component";
 import {datesearchcomponent} from "./datesearch.component";
 import {techcomponent} from "./tech.component";
-
+import {SignupComponent} from  "./sign_up/sign_up.component";
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { FormComponent }  from './form/form.component';
 @NgModule({
     imports:      [ BrowserModule,
-                    FormsModule,
-                    routing ],
+        FormsModule,
+        routing ],
     declarations: [ AppComponent,
-                    logincomponent,
-                    searchcomponent,
-                    floorsearchcomponent,
-                    datesearchcomponent,
-                    Page1Component,
-                    Page2Component,
-                    FormComponent,
-                    techcomponent],
+        logincomponent,
+        searchcomponent,
+        floorsearchcomponent,
+        datesearchcomponent,
+        Page1Component,
+        Page2Component,
+        FormComponent,
+        SignupComponent,
+        techcomponent],
 
     providers: [ appRoutingProviders],
 
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
+
