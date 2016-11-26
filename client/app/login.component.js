@@ -15,7 +15,8 @@ var logincomponent = (function () {
         this._router = _router;
         this.data = {
             username: " ",
-            password: " "
+            password: " ",
+            checkk: " "
         };
     }
     logincomponent.prototype.formSubmit = function () {
@@ -34,6 +35,7 @@ var logincomponent = (function () {
                 this._router.navigate(['/tech']);
             }
             else {
+                this.data.checkk = false;
                 console.log('Who are you ?');
             }
         }

@@ -1,0 +1,172 @@
+
+<div  [hidden]="submitted">
+    <div class="container"> <div class="form-group">
+
+        <div>
+            <h5 class="center-align">FRA301</h5>
+        </div>
+        <b class="highlight">Day / Month / Year</b>
+        <input type="date" class="datepicker"  #box1 (keyup.enter)="dateshow.date=box1.value" (blur)="dateshow.date=box1.value">
+        <!--<input #box (keyup.enter)="dateshow.date=box.value" placeholder="example : 01/01/2016">-->
+
+
+
+        <table>
+            <thead>
+            <tr>
+                <th data-field="time">TIME START</th>
+                <th data-field="day1">TIME END</th>
+            </tr>
+            </thead>
+
+            <tbody >
+
+            <tr>
+                <td ><input type="time" class="timepicker"  #box2 (keyup.enter)="dateshow.timeStart=box2.value"
+                            (blur)="dateshow.timeStart=box2.value"></td>
+                <td> <input type="time" class="timepicker"  #box3 (keyup.enter)="dateshow.timeEnd=box3.value"
+                            (blur)="dateshow.timeEnd=box3.value"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div [hidden]="dateshow.date"
+             class="alert alert-danger">
+            <div class="card-panel red accent-1">Date is required</div>
+        </div>
+        <div [hidden]="dateshow.timeStart"
+             class="alert alert-danger">
+            <div class="card-panel red accent-1">TimeStart is required</div>
+        </div>
+        <div [hidden]="dateshow.timeEnd"
+             class="alert alert-danger">
+            <div class="card-panel red accent-1">TimeEnd is required</div>
+        </div>
+
+        <table class="highlight">
+            <thead>
+            <tr>
+                <th data-field="time"><p>Time Start :</p>{{dateshow.timeStart}}</th>
+                <th data-field="time"><p>Time End :</p>{{dateshow.timeEnd}}</th>
+                <th data-field="day1"><p>Date :</p>{{dateshow.date}}</th>
+
+            </tr>
+            </thead>
+        </table>
+        <!---->
+        <table class="highlight">
+            <thead>
+            <tr>
+                <th data-field="id">Time</th>
+                <th data-field="name"><p></th>
+
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>8.30 - 9.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box"  />
+                    <label for="filled-in-box">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>9.30 - 10.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box1"  />
+                    <label for="filled-in-box1">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>10.30 - 11.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box3" />
+                    <label for="filled-in-box3">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>12.30 - 13.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box4" />
+                    <label for="filled-in-box4">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>14.30 - 15.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box5" />
+                    <label for="filled-in-box5">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>16.30 - 17.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box6" />
+                    <label for="filled-in-box6">Filled in</label>
+                </p></td>
+
+            </tr>
+            <tr>
+                <td>17.30 - 18.30</td>
+                <td> <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box7" />
+                    <label for="filled-in-box7">Filled in</label>
+                </p></td>
+
+            </tr>
+            </tbody>
+        </table>
+        <!---->
+        <!--test -->
+        <button type="submit" class="btn btn-default" (click)="submitted=true">Submit</button>
+        <div class="row"></div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+    <div [hidden]="!submitted"><div class="container">
+        <h2>You submitted the following:</h2>
+
+
+        <table class="highlight">
+            <thead>
+            <tr>
+                <th data-field="time">time</th>
+                <th data-field="day1"><p>Date :</p>{{dateshow.date}}</th>
+            </tr>
+
+            <tr >
+                <td><ul><li *ngFor="">{{Times}}</li></ul></td>
+                <td></td>
+
+            </tr>
+            </thead>
+        </table>
+
+
+
+        <br>
+        <button class="btn btn-default  pink lighten-1" (click)=" submitted =false "  >Edit</button>
+
+
+        <button class="btn waves-effect " type="submit" name="action" routerLink="/book/form" routerLinkActive="active">Form
+            <i class="material-icons right">mode_edit</i>
+        </button>
+
+    </div>
+</div>
+
+<!--<div>-->
+<!--<h5 class="right-align"><a routerLink="/page1" routerLinkActive="active">-->
+<!--<a class="waves-effect waves-light btn" >Submit</a>-->
+<!--</a></h5>-->
+<!--</div>-->

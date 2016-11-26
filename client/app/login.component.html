@@ -1,8 +1,7 @@
-<body >
+
 <div class="container">
     <div class="row">
         <div class="card-panel col offset-s3 s6">
-            <form (ngSubmit) ="formSubmit()">
                 <div class="input-field col s12 ">
                     <input [(ngModel)]="data.username" name="username" id="username" type="text" class="validate" >
                     <label for="username">Username</label>
@@ -12,10 +11,17 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="row center-align">
-                    <button class="btn waves-effect waves-teal  light-green accent-4" type="submit" >Login</button>
+                    <button class="btn waves-effect waves-teal  light-green accent-4" type="submit" (click)="formSubmit()">Login</button>
                 </div>
-            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col offset-s4 s4">
+            <div [hidden]="data.checkk"
+                 class="alert alert-danger">
+                <div class="card-panel blue lighten-5">Username or Password is not correct.</div>
+            </div>
         </div>
     </div>
 </div>
-</body>
+

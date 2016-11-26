@@ -9,18 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var Date = (function () {
+    function Date() {
     }
-    AppComponent = __decorate([
+    return Date;
+}());
+exports.Date = Date;
+var Page2Component = (function () {
+    function Page2Component() {
+        this.dateshow = {
+            date: '-',
+            timeStart: '-',
+            timeEnd: '-'
+        };
+        this.submitted = false;
+        this.click1 = false;
+        this.active = true;
+    }
+    Page2Component.prototype.onSubmit = function () {
+        this.submitted = true;
+        this.click1 = true;
+    };
+    Page2Component = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: 'app.component.html',
+            selector: 'page2',
+            templateUrl: 'page2.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], Page2Component);
+    return Page2Component;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Page2Component = Page2Component;
+//# sourceMappingURL=page2.component.js.map

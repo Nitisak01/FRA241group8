@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    template: `
-  <div class="card-panel backdrop">
-        <a routerLink="/" routerLinkActive="active"></a>
-  
-        
-   </div>
-  <router-outlet></router-outlet>
-`
+    templateUrl:'app.component.html' ,
 
 })
 export class AppComponent { }

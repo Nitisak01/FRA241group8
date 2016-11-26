@@ -9,6 +9,10 @@ import {searchcomponent} from "./search.component";
 import {floorsearchcomponent} from "./floorsearch.component";
 import {datesearchcomponent} from "./datesearch.component";
 import {techcomponent} from "./tech.component";
+
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { FormComponent }  from './form/form.component';
 @NgModule({
     imports:      [ BrowserModule,
                     FormsModule,
@@ -18,6 +22,9 @@ import {techcomponent} from "./tech.component";
                     searchcomponent,
                     floorsearchcomponent,
                     datesearchcomponent,
+                    Page1Component,
+                    Page2Component,
+                    FormComponent,
                     techcomponent],
 
     providers: [ appRoutingProviders],

@@ -9,7 +9,8 @@ import {Cookie} from 'ng2-cookies';
 export class logincomponent implements OnInit {
         data:Object = {
             username: " ",
-            password: " "
+            password: " ",
+            checkk: " "
         };
  constructor(private _router: Router){}
 
@@ -27,6 +28,7 @@ export class logincomponent implements OnInit {
          if(username == 'teach'&& password == 'teach'){
              this._router.navigate(['/tech']);
          }else{
+             this.data.checkk = false ;
              console.log('Who are you ?');
          }
      }
