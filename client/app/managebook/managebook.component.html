@@ -25,7 +25,7 @@
             <td>
 
                 <button *ngIf='clickA==false && clickB==false' class="btn btn-default light-green accent-4" (click)="submitted=true">About</button>
-                <a *ngIf='clickA==true ' class="btn-flat disabled">About</a>
+                <a *ngIf='clickA==true ' class="btn-flat disabled  light-green accent-2">About</a>
                 <a *ngIf='clickB==true' class="btn-flat disabled deep-orange lighten-4">About</a>
             </td>
         </tr>
@@ -35,7 +35,7 @@
             <td>12/05/2016</td>
             <td>12.30-13.30</td>
             <td>
-                <a  class="btn-flat disabled">About</a>
+                <a  class="btn-flat disabled  light-green accent-2">About</a>
             </td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@
             <td>12/06/2016</td>
             <td>16.30-18.30</td>
             <td>
-                <a class="btn-flat disabled">About</a>
+                <a class="btn-flat disabled  light-green accent-2">About</a>
             </td>
         </tr>
         </tbody>
@@ -60,7 +60,7 @@
 
         <!---->
         <div class="right-align">
-            <br><button class="btn btn-default  red lighten-1" (click)="submitted=false ;clickB=true">Deny</button>
+            <br><button class="btn btn-default  red lighten-1" (click)="submitted=false ;clickB=true">Deny</button><br>
             <button class="btn btn-default light-green darken-1" (click)="clickA=true ; submitted=false">Submit</button>
 
         </div>
