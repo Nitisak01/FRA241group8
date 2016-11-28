@@ -3,11 +3,22 @@
         <a href="#" class="brand-logo center grey darken-3">ABOUT</a>
     </div>
 </nav>
+<br>
+<div class="right-align">
+    <div class="switch">
+        <label>
+            Thai
+            <input  type="checkbox" (focus)="submitted=!submitted">
+            <span class="lever"></span>
+            Eng
+        </label>
+    </div></div>
+<div [hidden]="submitted">
 <footer class="page-footer  grey darken-2">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">HOW TO BOOKING FOR STUDENT</h5>
+                <h5 class="white-text">วิธีการจองห้องสำหรับนักศึกษา</h5>
                 <p class="grey-text text-lighten-4">1.เมื่อเข้ามาในWebแล้ว จะต้องlogin โดยการใส่Username และ  Password เพื่อข้าไปใช้งาน</p>
                 <p class="grey-text text-lighten-4">2.หากไม่มีรหัสในการใช้งาน จะต้องสมัครเพื่อใช้งานโดยคลิ๊กปุ่ม SingUp ที่มุมบนด้านขวา</p>
                 <p class="grey-text text-lighten-4">3.เมื่อLoginได้แล้ว ให้กดปุ่มENTER SITE เพื่อทำการจองห้อง</p>
@@ -35,5 +46,38 @@
     </div>
 
 </footer>
+</div>
 
+<div [hidden]="!submitted">
 
+    <footer class="page-footer  grey darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">HOW TO BOOKING FOR STUDENT</h5>
+                    <p class="grey-text text-lighten-4">1.To complete username and password in the space before using this program.</p>
+                    <p class="grey-text text-lighten-4">2.If you don't have userID, please press the 'Sign up' button.</p>
+                    <p class="grey-text text-lighten-4"> 3.Press the 'ENTER SITE' button to enter the website.</p>
+                    <p class="grey-text text-lighten-4">4.You can book the room with choosing floors that you need and press the 'book' button to run booking room process.</p>
+                    <p class="grey-text text-lighten-4">5.In the 'Making a reservation' window you have to fill in the date and time blank and press the 'submit' button and press the 'FORM' button.</p>
+                    <p class="grey-text text-lighten-4">6.If you want to edit a reservation. You should press 'EDIT' button.</p>
+                    <p class="grey-text text-lighten-4">7.To complete name, studentID floor and reason for booking in the blank and press 'SUMMIT' again.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Copyright FIBO
+                <a class="grey-text text-lighten-4 right" routerLink="/book/form/commitform/formt">How to booking for teacher </a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <a class="grey-text text-lighten-4 right" href="#!">Back homepage</a>
+
+            </div>
+        </div>
+
+    </footer>
+</div>
