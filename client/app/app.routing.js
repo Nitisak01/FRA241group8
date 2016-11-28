@@ -12,6 +12,7 @@ var page2_component_1 = require('./page2/page2.component');
 var form_component_1 = require('./form/form.component');
 var sign_up_component_1 = require('./sign_up/sign_up.component');
 var managebook_component_1 = require("./managebook/managebook.component");
+var formt_component_1 = require("./formteacher/formt.component");
 var appRoutes = [
     { path: '', component: login_component_1.logincomponent },
     { path: 'managebookingroom', component: managebook_component_1.managebookComponent },
@@ -26,6 +27,7 @@ var appRoutes = [
     { path: 'book', component: page2_component_1.Page2Component },
     { path: 'book/form', component: page1_component_1.Page1Component },
     { path: 'book/form/commitform', component: form_component_1.FormComponent },
+    { path: 'book/form/commitform/formt', component: formt_component_1.FormtComponent },
 ];
 exports.appRoutingProviders = [];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);
