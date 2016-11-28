@@ -29,6 +29,7 @@ app.use('/signup', index);
 app.use('/book/form', index);
 app.use('/book/form/commitform', index);
 app.use('/book/form/commitform/formt', index);
+app.use('/contact', index);
 
 
 app.use(express.static(path.join(__dirname, 'client')));

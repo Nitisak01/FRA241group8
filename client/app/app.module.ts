@@ -20,6 +20,7 @@ import { FloorseachComponent } from './floor/floorseach.component';
 import {SignupComponent} from  "./sign_up/sign_up.component";
 import {managebookComponent} from "./managebook/managebook.component";
 import {FormtComponent} from "./formteacher/formt.component";
+import {contactComponent} from "./Contact/contact.component";
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {FormtComponent} from "./formteacher/formt.component";
                     Floor3Component,
                     HighlightDirective,
                     FloorseachComponent,
-                    managebookComponent
+                    managebookComponent,
+                    contactComponent
 
     ],
 

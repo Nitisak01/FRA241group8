@@ -15,12 +15,14 @@ import { FormComponent }  from './form/form.component';
 import { SignupComponent }  from './sign_up/sign_up.component';
 import {managebookComponent} from "./managebook/managebook.component";
 import {FormtComponent} from "./formteacher/formt.component";
+import {contactComponent} from "./Contact/contact.component";
 
 
 
 
 const appRoutes: Routes = [
     { path: '', component: logincomponent },
+    { path: 'contact', component: contactComponent },
     { path: 'managebookingroom', component: managebookComponent },
     { path: 'floorseach', component: FloorseachComponent },
     { path: 'login', component: logincomponent },
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
     { path: 'book/form', component: Page1Component },
     { path: 'book/form/commitform', component: FormComponent },
     { path: 'book/form/commitform/formt', component: FormtComponent },
+
 ];
 
 export const appRoutingProviders: any[] = [
