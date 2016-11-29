@@ -91,15 +91,18 @@
     <p> <i class="large material-icons">android</i> <label for="icon_prefix" >YOUR WELCOME </label>{{dateshow.firstname}} {{dateshow.surname}}</p>
 
     <ul class="collection">
-        <li class="collection-item"><i class="material-icons">assignment_ind</i>USERNAME  =>  {{dateshow.username}}</li>
-        <li class="collection-item"><i class="material-icons">lock_open</i>PASSWORD  =>  {{dateshow.password}}</li>
-        <li class="collection-item"><i class="material-icons">supervisor_account</i>PASSWORD  =>  {{dateshow.email}}</li>
-        <li class="collection-item"><i class="material-icons">call</i>TEL.  =>  {{dateshow.telephone}}</li>
+        <li class="collection-item"><i class="material-icons">assignment_ind</i>USERNAME :  {{dateshow.username}}</li>
+        <li class="collection-item"><i class="material-icons">lock_open</i>PASSWORD :  {{dateshow.password}}</li>
+        <li class="collection-item"><i class="material-icons">supervisor_account</i>PASSWORD :  {{dateshow.email}}</li>
+        <li class="collection-item"><i class="material-icons">call</i>TEL.   :  {{dateshow.telephone}}</li>
 
     </ul>
-    <p> ****************************************************************************************************************THANK YOU {{dateshow.firstname}} {{dateshow.surname}}**************************************************************************************************************************************  </p>
 
-
+    <div class="center-align">
+        <p> THANK YOU {{dateshow.firstname}} {{dateshow.surname}} </p>
+        <button class="btn waves-effect waves-light"  routerLink="/login" type="submit" name="action" >OK
+        <i class="material-icons right">send</i>
+    </button></div><br>
 
 
 </div>
