@@ -26,11 +26,11 @@ export class SignupComponent {
 
     dateshow: signup = {
         firstname: '',
-    surname : '',
-    username : '',
-    password : '',
-    confirm : '',
-    email : '',
-    telephone : '',
+        surname : '',
+        username : '',
+        password : '',
+        confirm : '',
+        email : '',
+        telephone : '',
     };
 }
