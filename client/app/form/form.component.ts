@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 
 })
 export class FormComponent {
+    submitted = false;
 
+    onSubmit() { this.submitted = true;
+
+    }
+    active = true;
 }

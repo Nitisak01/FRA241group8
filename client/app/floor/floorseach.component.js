@@ -13,6 +13,8 @@ var router_1 = require("@angular/router");
 var FloorseachComponent = (function () {
     function FloorseachComponent(_router) {
         this._router = _router;
+        this.submitted = false;
+        this.active = true;
         var x = document.cookie.split(';');
         var cookievalue;
         var i = 0;
@@ -36,6 +38,9 @@ var FloorseachComponent = (function () {
             }
         }
     }
+    FloorseachComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+    };
     FloorseachComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

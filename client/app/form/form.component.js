@@ -11,7 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var FormComponent = (function () {
     function FormComponent() {
+        this.submitted = false;
+        this.active = true;
     }
+    FormComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+    };
     FormComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

@@ -3,21 +3,23 @@
     <div class="parallax-container">
         <img class="parallax" width="1250" src="http://www.fibo.kmutt.ac.th/fiboweb2015/wp-content/uploads/2015/12/Aphikrit-01-1030x687.jpg">
     </div>
-    <div class="section white">
-        <div class="right-align"><div class="switch">
+    <br>
+
+        <div class="right-align">
+            <div class="switch">
             <label >
-                Eng
-                <input type="checkbox">
-                <span class="lever"></span>
                 Thai
+                <input  type="checkbox" (focus)="submitted=!submitted">
+                <span class="lever"></span>
+                Eng
             </label>
         </div></div>
-        <div class="row container">
 
-            <h2 class="header">กฎการจองห้อง</h2>
+        <div [hidden]="submitted">
+            <h2>กฎการจองห้อง</h2>
 
 
-            <a class="grey-text text-darken-3 lighten-3">
+
                 <p>  1.ผู้จองควรจองล่วงหน้าก่อนการใช้งาน </p>
                 <p> 2.ในการยกเลิกการจองควรยกเลิกก่อนวันที่ใช้งานจริง</p>
                 <p>3.กรณีนักศึกษา จะสามารถจองห้องได้แค่1ห้องเท่านั้น ไม่สามารถจองล่วงหน้าครั้งละหลายๆห้องได้</p>
@@ -25,9 +27,31 @@
                 <p>5.ในการจองห้อง ควรเลือกห้องที่พอดีต่อจำนวนคนที่จะใช้งาน</p>
                 <p>6.ระบุชื่อนักศึกษาให้ครบ ตามrequest ในแต่ละห้อง</p>
                 <p>7.ชื่อuser ต้องอิงตาม database เช่น รหัสนักศึกษา เป็นต้น</p>
-            </a>
-        </div>
-    </div>
+            </div>
+
+
+
+
+        <div [hidden]="!submitted">
+
+            <h2 >Rule of Reservation</h2>
+
+
+                 <p> 1.To reserve before using the room. </p>
+                 <p>2.To cancle a reservation before using the room.</p>
+                 <p>3.In student case,One student can reserves only one room.</p>
+                 <p>4.For a ban case, If person who booked the room but didn't come.</p>
+                <p> 5.To choose the room which suitable for member.</p>
+                <p>6.To fill name of members completely according to requiring.</p>
+                <p>7.The username depend on database such as studentID.</p></div>
+
+
+
+
+
+<br>
+
+
     <div class="parallax-container">
         <img class="parallax" width="1250" src="http://mpics.manager.co.th/pics/Images/559000001242507.JPEG">
     </div>

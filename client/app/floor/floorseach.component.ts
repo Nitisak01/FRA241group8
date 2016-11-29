@@ -9,6 +9,12 @@ import {Router} from "@angular/router";
 
 })
 export class FloorseachComponent {
+    submitted = false;
+
+    onSubmit() { this.submitted = true;
+
+    }
+    active = true;
     constructor(public _router: Router) {
         var x = document.cookie.split(';');
         var cookievalue;
