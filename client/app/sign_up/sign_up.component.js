@@ -9,9 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var signup = (function () {
+    function signup() {
+    }
+    return signup;
+}());
+exports.signup = signup;
 var SignupComponent = (function () {
     function SignupComponent() {
+        this.clickT = false;
+        this.clickS = false;
+        this.submitted = false;
+        this.active = true;
+        this.dateshow = {
+            firstname: '',
+            surname: '',
+            username: '',
+            password: '',
+            confirm: '',
+            email: '',
+            telephone: '',
+        };
     }
+    SignupComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+    };
     SignupComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
