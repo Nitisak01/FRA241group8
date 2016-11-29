@@ -6,110 +6,100 @@
 <br>
 <br>
 <br>
-<div class="container">
-
-    <!-- <form action="/new" method="POST"> ||||||Cannot use form for now -->
-
-    <div class="row">
-        <div class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="fname" name="fname" type="text" class="validate">
-                    <label for="fname">First Name</label>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="lname" name="lname" type="text" class="validate">
-                    <label for="lname">Surname</label>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="username" name="username" type="text" class="validate">
-                    <label for="username">Username</label>
+<div [hidden]="submitted">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" #box1 (keyup.enter)="dateshow.firstname=box1.value" (blur)="dateshow.firstname=box1.value">
+                        <label for="icon_prefix" >First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" #box2 (keyup.enter)="dateshow.surname=box2.value" (blur)="dateshow.surname=box2.value">
+                        <label for="icon_prefix">Surname</label>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">lock</i>
-                    <input id="password" name="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">lock</i>
-                    <input id="password" name="password" type="password" class="validate">
-                    <label for="password">Confirm Password</label>
+            <br>
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" #box3 (keyup.enter)="dateshow.username=box3.value" (blur)="dateshow.username=box3.value">
+                        <label for="icon_prefix">Username</label>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col s12">
-            <div class="row">
-                <div class="col s12"></div>
-                <div class="input-field col s12 m4 l8">
-                    <i class="material-icons prefix">email</i>
-                    <input id="icon_email" type="email" class="validate">
-                    <label for="email">Email</label>
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="icon_email" type="password" class="validate" #box4 (keyup.enter)="dateshow.password=box4.value" (blur)="dateshow.password=box4.value" >
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="icon_email" type="password" class="validate" >
+                        <label for="password">Confirm Password</label>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12"></div>
+                    <div class="input-field col s12 m4 l8">
+                        <i class="material-icons prefix">email</i>
+                        <input id="icon_email" type="email" class="validate" #box5 (keyup.enter)="dateshow.email=box5.value" (blur)="dateshow.email=box5.value">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate" #box6 (keyup.enter)="dateshow.telephone=box6.value" (blur)="dateshow.telephone=box6.value">
+                <label for="icon_telephone">Telephone</label>
+            </div>
+            <div class="input-field col s12">
+                <select class="browser-default">
+                    <option value="" disabled selected>What's your status</option>
+                    <option value="1" (click)="clickT=!clickT" >Teacher</option>
+                    <option value="2" (click)="clickS=!clickS">Student</option>
+                </select>
+            </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input id="tel" name="tel" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
-        </div>
-
-        <div class="input-field col s12">
-            <select class="browser-default">
-                <option value="" disabled selected>What's your status</option>
-                <option value="1">Teacher</option>
-                <option value="2">Student</option>
-            </select>
         </div>
     </div>
-
-    <!-- </form> -->
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <!-- testing code for insert data
-    /* test */
-    <section class="insert" action="/insert" method="post">
-
-            <div class="input">
-                <input type="text" id="username" name="username">
-                <label for="username">user</label>
-            </div>
-            <div class="input">
-                <input type="text" id="password" name="password">
-                <label for="password">pass</label>
-            </div>
-            <button type="submit">INSERT</button>
-
-    </section>
-    -->
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
+    <br>
+    <div class="container">
+        <button class="btn waves-effect red accent-4" routerLink="/login" routerLinkActive="active">Cancel
+            <i class="material-icons left">skip_previous</i>
+        </button>
+        <button class="btn waves-effect waves-light" (click)="submitted=true">Submit
+            <i class="material-icons right">done</i>
+        </button>
+    </div>
+    <br>
 
 </div>
-<br>
-<div class="container">
-    <button class="btn waves-effect red accent-4" routerLink="/login" routerLinkActive="active">Cancel
-        <i class="material-icons left">skip_previous</i>
-    </button>
-    <button class="btn waves-effect waves-light" routerLink="/login" routerLinkActive="active">Submit
-        <i class="material-icons right">done</i>
-    </button>
+
+<div [hidden]="!submitted">
+
+
+    <p> <i class="large material-icons">android</i> <label for="icon_prefix" >YOUR WELCOME </label>{{dateshow.firstname}} {{dateshow.surname}}</p>
+
+    <ul class="collection">
+        <li class="collection-item"><i class="material-icons">assignment_ind</i>USERNAME  =>  {{dateshow.username}}</li>
+        <li class="collection-item"><i class="material-icons">lock_open</i>PASSWORD  =>  {{dateshow.password}}</li>
+        <li class="collection-item"><i class="material-icons">supervisor_account</i>PASSWORD  =>  {{dateshow.email}}</li>
+        <li class="collection-item"><i class="material-icons">call</i>TEL.  =>  {{dateshow.telephone}}</li>
+
+    </ul>
+    <p> ****************************************************************************************************************THANK YOU {{dateshow.firstname}} {{dateshow.surname}}**************************************************************************************************************************************  </p>
+
+
+
+
 </div>
-<br>
