@@ -8,11 +8,15 @@
 <br>
 <div [hidden]="submitted">
 <div class="container">
+
+    <!-- <form action="/new" method="POST"> ||||||Cannot use form for now -->
+
     <div class="row">
         <div class="col s12">
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
+<<<<<<< HEAD
                     <input id="icon_prefix" type="text" class="validate" #box1 (keyup.enter)="dateshow.firstname=box1.value" (blur)="dateshow.firstname=box1.value">
                     <label for="icon_prefix" >First Name</label>
                 </div>
@@ -20,33 +24,59 @@
                     <i class="material-icons prefix">account_circle</i>
                     <input id="icon_prefix" type="text" class="validate" #box2 (keyup.enter)="dateshow.surname=box2.value" (blur)="dateshow.surname=box2.value">
                     <label for="icon_prefix">Surname</label>
+=======
+                    <input id="fname" name="fname" type="text" class="validate">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="lname" name="lname" type="text" class="validate">
+                    <label for="lname">Surname</label>
+>>>>>>> refs/remotes/Nitisak01/master
                 </div>
             </div>
         </div>
+
         <br>
+
         <div class="col s12">
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
+<<<<<<< HEAD
                     <input id="icon_prefix" type="text" class="validate" #box3 (keyup.enter)="dateshow.username=box3.value" (blur)="dateshow.username=box3.value">
                     <label for="icon_prefix">Username</label>
+=======
+                    <input id="username" name="username" type="text" class="validate">
+                    <label for="username">Username</label>
+>>>>>>> refs/remotes/Nitisak01/master
                 </div>
             </div>
         </div>
+
         <div class="col s12">
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">lock</i>
+<<<<<<< HEAD
                     <input id="icon_email" type="password" class="validate" #box4 (keyup.enter)="dateshow.password=box4.value" (blur)="dateshow.password=box4.value" >
+=======
+                    <input id="password" name="password" type="password" class="validate">
+>>>>>>> refs/remotes/Nitisak01/master
                     <label for="password">Password</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">lock</i>
+<<<<<<< HEAD
                     <input id="icon_email" type="password" class="validate" >
+=======
+                    <input id="password" name="password" type="password" class="validate">
+>>>>>>> refs/remotes/Nitisak01/master
                     <label for="password">Confirm Password</label>
                 </div>
             </div>
         </div>
+
         <div class="col s12">
             <div class="row">
                 <div class="col s12"></div>
@@ -57,11 +87,17 @@
                 </div>
             </div>
         </div>
+
         <div class="input-field col s6">
             <i class="material-icons prefix">phone</i>
+<<<<<<< HEAD
             <input id="icon_telephone" type="tel" class="validate" #box6 (keyup.enter)="dateshow.telephone=box6.value" (blur)="dateshow.telephone=box6.value">
+=======
+            <input id="tel" name="tel" type="tel" class="validate">
+>>>>>>> refs/remotes/Nitisak01/master
             <label for="icon_telephone">Telephone</label>
         </div>
+
         <div class="input-field col s12">
             <select class="browser-default">
                 <option value="" disabled selected>What's your status</option>
@@ -69,8 +105,31 @@
                 <option value="2" (click)="clickS=!clickS">Student</option>
             </select>
         </div>
-
     </div>
+
+    <!-- </form> -->
+
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+    <!-- testing code for insert data
+    /* test */
+    <section class="insert" action="/insert" method="post">
+
+            <div class="input">
+                <input type="text" id="username" name="username">
+                <label for="username">user</label>
+            </div>
+            <div class="input">
+                <input type="text" id="password" name="password">
+                <label for="password">pass</label>
+            </div>
+            <button type="submit">INSERT</button>
+
+    </section>
+    -->
+
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+
 </div>
 <br>
 <div class="container">
